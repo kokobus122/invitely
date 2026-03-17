@@ -1,0 +1,83 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="600" y1="0" x2="600" y2="700" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#E9D8C9"/>
+      <stop offset="0.45" stop-color="#F3D9BE"/>
+      <stop offset="1" stop-color="#F1E6D7"/>
+    </linearGradient>
+    <linearGradient id="sunset" x1="600" y1="110" x2="600" y2="430" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#E6B6A2"/>
+      <stop offset="1" stop-color="#F2D9B8" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="hillLeft" x1="0" y1="700" x2="460" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4A6A5A"/>
+      <stop offset="1" stop-color="#6E8A75"/>
+    </linearGradient>
+    <linearGradient id="hillRight" x1="1200" y1="700" x2="760" y2="380" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#476457"/>
+      <stop offset="1" stop-color="#6F8A74"/>
+    </linearGradient>
+    <filter id="softGlow" x="0" y="0" width="1200" height="700" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feBlend in="SourceGraphic" in2="blur" mode="screen"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="700" fill="url(#sky)"/>
+  <ellipse cx="600" cy="290" rx="250" ry="130" fill="url(#sunset)"/>
+
+  <g opacity="0.55" fill="#F9EEDF">
+    <path d="M120 185C175 160 252 160 320 188C250 204 184 214 120 207V185Z"/>
+    <path d="M850 146C894 120 960 118 1020 145C957 162 897 171 850 162V146Z"/>
+    <path d="M475 132C510 108 564 110 608 133C559 147 515 152 475 145V132Z"/>
+  </g>
+
+  <circle cx="600" cy="455" r="56" fill="#F5E3C9"/>
+
+  <path d="M0 700V540C170 472 310 480 458 700H0Z" fill="url(#hillLeft)"/>
+  <path d="M1200 700V526C1008 458 856 474 700 700H1200Z" fill="url(#hillRight)"/>
+  <path d="M380 700C488 575 716 560 840 700H380Z" fill="#C6B0B8" opacity="0.6"/>
+
+  <g transform="translate(120 430)">
+    <rect x="0" y="50" width="160" height="120" fill="#A67F6D" stroke="#5A4037" stroke-width="8"/>
+    <rect x="12" y="35" width="136" height="25" fill="#7A5A52" stroke="#5A4037" stroke-width="8"/>
+    <rect x="20" y="80" width="34" height="30" fill="#F4E9D8" stroke="#5A4037" stroke-width="6"/>
+    <rect x="106" y="80" width="34" height="30" fill="#F4E9D8" stroke="#5A4037" stroke-width="6"/>
+    <rect x="64" y="98" width="30" height="72" fill="#8B5D4A" stroke="#5A4037" stroke-width="6"/>
+    <path d="M-6 50H166L80 -6L-6 50Z" fill="#7D4F5E" stroke="#5A4037" stroke-width="8"/>
+  </g>
+
+  <g transform="translate(916 436)">
+    <rect x="0" y="46" width="170" height="124" fill="#AE8570" stroke="#5A4037" stroke-width="8"/>
+    <rect x="12" y="30" width="146" height="25" fill="#864F57" stroke="#5A4037" stroke-width="8"/>
+    <rect x="22" y="78" width="30" height="30" fill="#F4E9D8" stroke="#5A4037" stroke-width="6"/>
+    <rect x="62" y="78" width="30" height="30" fill="#F4E9D8" stroke="#5A4037" stroke-width="6"/>
+    <rect x="108" y="78" width="30" height="30" fill="#F4E9D8" stroke="#5A4037" stroke-width="6"/>
+    <rect x="62" y="98" width="36" height="72" fill="#8B5D4A" stroke="#5A4037" stroke-width="6"/>
+    <path d="M-8 46H178L85 -8L-8 46Z" fill="#A9556A" stroke="#5A4037" stroke-width="8"/>
+  </g>
+
+  <g transform="translate(530 240)">
+    <rect x="0" y="0" width="140" height="184" rx="6" fill="#F8EAD8" stroke="#6D4A3E" stroke-width="7"/>
+    <rect x="20" y="24" width="100" height="110" rx="5" fill="#FFF7EC" stroke="#D6B89C" stroke-width="4"/>
+    <path d="M36 56L70 84L104 56" stroke="#B85C38" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M36 56H104" stroke="#B85C38" stroke-width="6" stroke-linecap="round"/>
+    <path d="M36 56V106C36 112 40 116 46 116H94C100 116 104 112 104 106V56" stroke="#B85C38" stroke-width="6"/>
+    <rect x="30" y="142" width="80" height="8" rx="4" fill="#DAB79A"/>
+    <rect x="42" y="158" width="56" height="8" rx="4" fill="#E7CCB3"/>
+  </g>
+
+  <g filter="url(#softGlow)">
+    <path d="M180 350C300 270 420 260 530 320" stroke="#5FA8E2" stroke-width="10" stroke-linecap="round" stroke-dasharray="18 16"/>
+    <path d="M670 328C768 384 864 402 980 354" stroke="#D778B4" stroke-width="10" stroke-linecap="round" stroke-dasharray="18 16"/>
+  </g>
+
+  <g fill="#E9D5B8">
+    <rect x="500" y="206" width="8" height="8"/>
+    <rect x="516" y="190" width="8" height="8"/>
+    <rect x="701" y="222" width="8" height="8"/>
+    <rect x="718" y="206" width="8" height="8"/>
+    <rect x="754" y="304" width="8" height="8"/>
+    <rect x="460" y="322" width="8" height="8"/>
+  </g>
+</svg>
