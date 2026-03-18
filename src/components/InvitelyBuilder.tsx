@@ -206,7 +206,6 @@ export default function InvitelyBuilder({
           details, done.
         </p>
       </section> */}
-
       <div className="mt-2 flex justify-center overflow-x-auto border-b border-[rgba(74,55,40,0.15)] px-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:px-8">
         {occasionTabs.map((tab) => (
           <button
