@@ -50,9 +50,9 @@ export default function Hero() {
           </div>
 
           <div style={riseIn(120)} className="relative">
-            <div className="overflow-hidden border border-[rgba(74,55,40,0.14)] bg-[#ead9c5] shadow-[0_12px_30px_rgba(26,22,18,0.12)]">
+            <div className="overflow-hidden">
               <img
-                src="/hero-invite-scene.svg"
+                src="/hero-invite-scene.png"
                 alt="Illustration of invitations being shared between homes at sunset"
                 className="block h-full w-full object-cover"
               />

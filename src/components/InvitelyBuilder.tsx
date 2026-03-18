@@ -19,6 +19,7 @@ import {
 import { saveCurrentUserCard } from "#/lib/card";
 import type { CurrentUserCardResult } from "#/lib/card";
 import type { Fields, Occasion, Template } from "./InvitelyBuilder.types";
+import { authClient } from "#/lib/auth-client";
 
 const TOAST_DURATION_MS = 2800;
 const CARD_AUTOSAVE_DELAY_MS = 700;
@@ -32,6 +33,8 @@ export default function InvitelyBuilder({
   initialUserCard,
 }: InvitelyBuilderProps) {
   const navigate = useNavigate();
+  const { data: session } = authClient.useSession();
+  const user = session?.user;
   const persistCurrentUserCard = useServerFn(saveCurrentUserCard);
   const [currentTpl, setCurrentTpl] = useState<Template>(
     initialUserCard.card?.template ?? "elegant",
@@ -272,9 +275,14 @@ export default function InvitelyBuilder({
           </div>
           {canSaveCard && (
             <div className="mt-4 text-center text-[0.65rem] tracking-[0.08em] text-[#8c7b6b]/70">
-            Your card updates live as you type
-          </div>
+              Your card updates live as you type
+            </div>
           )}
+          {!user ? (
+            <div className="mt-4 text-center text-[0.68rem] text-[#8c7b6b]">
+              Reminder: sign in to save this card to your account.
+            </div>
+          ) : null}
           {canSaveCard ? (
             <div className="mt-2 text-center text-[0.68rem] text-[#8c7b6b]">
               {cardSaveStatus === "saving"

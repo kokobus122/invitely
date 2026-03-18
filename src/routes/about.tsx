@@ -1,3 +1,4 @@
+import { authClient } from "#/lib/auth-client";
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/about")({
@@ -5,6 +6,8 @@ export const Route = createFileRoute("/about")({
 });
 
 function About() {
+  const { data: session } = authClient.useSession();
+  const user = session?.user;
   return (
     <main className="min-h-screen bg-[#f5f0e8] px-4 py-14 text-[#1a1612] sm:px-8">
       <section className="mx-auto max-w-[980px] border border-[rgba(74,55,40,0.14)] bg-[#f8f3eb] p-6 sm:p-10">
@@ -54,7 +57,7 @@ function About() {
         </div>
 
         <div className="mt-8 flex flex-wrap gap-3">
-          <Link to="/">
+          <Link to="/builder">
             <button
               type="button"
               className="bg-[#1a1612] px-5 py-2.5 text-[0.82rem] font-medium tracking-[0.05em] text-[#f5f0e8] transition hover:bg-[#4a3728]"
@@ -62,14 +65,16 @@ function About() {
               Open Builder
             </button>
           </Link>
-          <Link to="/login">
-            <button
-              type="button"
-              className="border border-[rgba(74,55,40,0.25)] bg-transparent px-5 py-2.5 text-[0.82rem] font-medium tracking-[0.05em] text-[#8c7b6b] transition hover:border-[#4a3728] hover:text-[#4a3728]"
-            >
-              Sign in
-            </button>
-          </Link>
+          {!user && (
+            <Link to="/login">
+              <button
+                type="button"
+                className="border border-[rgba(74,55,40,0.25)] bg-transparent px-5 py-2.5 text-[0.82rem] font-medium tracking-[0.05em] text-[#8c7b6b] transition hover:border-[#4a3728] hover:text-[#4a3728]"
+              >
+                Sign in
+              </button>
+            </Link>
+          )}
         </div>
       </section>
     </main>
