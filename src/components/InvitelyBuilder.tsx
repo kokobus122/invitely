@@ -263,7 +263,7 @@ export default function InvitelyBuilder({
           </div>
         </aside>
 
-        <section className="flex flex-col items-center justify-center bg-[linear-gradient(0deg,transparent,transparent_39px,rgba(74,55,40,0.04)_39px,rgba(74,55,40,0.04)_40px),linear-gradient(90deg,transparent,transparent_39px,rgba(74,55,40,0.04)_39px,rgba(74,55,40,0.04)_40px)] p-6 md:p-8">
+        <section className="flex flex-col items-center justify-center bg-[repeating-linear-gradient(0deg,transparent,transparent_39px,rgba(74,55,40,0.04)_39px,rgba(74,55,40,0.04)_40px),repeating-linear-gradient(90deg,transparent,transparent_39px,rgba(74,55,40,0.04)_39px,rgba(74,55,40,0.04)_40px)] p-6 md:p-8">
           <div
             key={currentTpl}
             className="drop-shadow-[0_20px_60px_rgba(26,22,18,0.2)]"
